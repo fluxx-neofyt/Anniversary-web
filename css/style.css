@@ -1,10 +1,92 @@
 /* open-sans 300 */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap'); 
-/* open-sans 400 */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 :root{
     --text--opens-sans: 'Open Sans', sans-serif;
+    --text--opens-sans400: 'Open Sans', sans-serif;
     --color--grey: #787878;
     --color--light-grey: #C2C2C2;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+.main{
+    min-height: 50vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10vh;
+}
+
+.container-header{
+    padding: 40px 90px;
+    box-shadow: -2px 3px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 88px;
+    font-family: var(--text--opens-sans);
+    font-weight: 300;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+/* .container-header + span{
+    margin-left: 3vw;
+} */
+
+.container-header + span .fas{
+    font-size: 30px;
+}
+
+.container-header + span .fas:hover{
+    color: var(--color--grey);
+    transition: .6s;
+    cursor: pointer;
+}
+
+.main-container + span {
+    font-family: var(--text--opens-sans);
+    border-bottom: 1px solid black;
+}
+
+.container{
+    width: 100vw;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container span{
+    padding: 20px 35px;
+    box-shadow: -2px 3px 10px rgba(0, 0, 0, 0.30);
+    border-radius: 88px;
+    margin: 10px;
+    font-family: var(--text--opens-sans);
+}
+
+.container span:hover{
+    background-color: var(--color--light-grey);
+    transition: .6s;
+    color: white;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 730px) {
+    .container{
+        flex-direction: column;
+    }
 }
