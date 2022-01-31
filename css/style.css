@@ -1,0 +1,10 @@
+/* open-sans 300 */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap'); 
+/* open-sans 400 */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root{
+    --text--opens-sans: 'Open Sans', sans-serif;
+    --color--grey: #787878;
+    --color--light-grey: #C2C2C2;
+}
