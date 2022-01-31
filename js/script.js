@@ -1,6 +1,7 @@
 //constant
 var todaysDate = new Date();
 const ourAnniversary = new Date("2017-03-04T21:07:00")
+const ourDayWeMet = new Date("2015-06-15T15:07:00")
 
 //select DOM
 outputInSeconds = document.querySelector('.seconds');
@@ -9,6 +10,10 @@ outputInHours = document.querySelector('.hours');
 outputInDays = document.querySelector('.days');
 outputInMonths = document.querySelector('.months');
 outputInYears = document.querySelector('.years');
+
+arrowUp= document.querySelector('.up');
+arrowDown= document.querySelector('.down');
+header = document.getElementById('main-header');
 
 textArray = document.querySelector('.output');
 
@@ -19,47 +24,101 @@ outputInHours.addEventListener('click', yearsInHours);
 outputInDays.addEventListener('click', yearsInDays);
 outputInMonths.addEventListener('click', yearsInMonths);
 outputInYears.addEventListener('click', years);
+arrowUp.addEventListener('click', changeText);
+arrowDown.addEventListener('click', changeTextBack);
 
 //functions
 function yearsInSeconds(){
-    days = everythingIntoDays();
-    daysIntoMinutes = days * 24 * 60 * 60;
-    textArray.innerText = daysIntoMinutes + " seconds";
+    if (header.innerText.includes("other")){
+        days = everythingIntoDays_();
+        daysIntoMinutes = days * 24 * 60 * 60;
+        textArray.innerText = daysIntoMinutes + " seconds";
+    }else{
+        days = everythingIntoDays();
+        daysIntoMinutes = days * 24 * 60 * 60;
+        textArray.innerText = daysIntoMinutes + " seconds";
+    }
 };
 
 function yearsInMinutes(){
-    days = everythingIntoDays();
-    daysIntoMinutes = days * 24 * 60;
-    textArray.innerText = daysIntoMinutes + " minutes";
+    if (header.innerText.includes("other")){
+        days = everythingIntoDays_();
+        daysIntoMinutes = days * 24 * 60;
+        textArray.innerText = daysIntoMinutes + " minutes";
+    }else{
+        days = everythingIntoDays();
+        daysIntoMinutes = days * 24 * 60;
+        textArray.innerText = daysIntoMinutes + " minutes";
+    }
 };
 
 function yearsInHours(){
+    if (header.innerText.includes("other")){
+        days = everythingIntoDays_();
+        daysIntoHours = days * 24;
+        textArray.innerText = daysIntoHours + " hours";
+    }else{
     days = everythingIntoDays();
     daysIntoHours = days * 24;
     textArray.innerText = daysIntoHours + " hours";
+    }
 };
 
 function yearsInDays(){
+    if (header.innerText.includes("other")){
+        days = everythingIntoDays_();
+        textArray.innerText = days + " days";
+    }else{
     days = everythingIntoDays();
     textArray.innerText = days + " days";
+    }
 };
 
 
 function yearsInMonths(){
+    if (header.innerText.includes("other")){
+        days = everythingIntoDays_();
+        daysIntoMonths = (days / 365) * 12 ;
+        textArray.innerText = daysIntoMonths + " months";
+    }else{
     days = everythingIntoDays();
     daysIntoMonths = (days / 365) * 12 ;
     textArray.innerText = daysIntoMonths + " months";
-
+    }
 };
 
 function years(){
-    days = everythingIntoDays();
-    daysIntoYears = days / 364;
-    textArray.innerText = daysIntoYears + " years";
+    if (header.innerText.includes("other")){
+        days = everythingIntoDays_();
+        daysIntoYears = days / 364;
+        textArray.innerText = daysIntoYears + " years";
+    }else{
+        days = everythingIntoDays();
+        daysIntoYears = days / 364;
+        textArray.innerText = daysIntoYears + " years";
+    }
+    
 }
 
 function everythingIntoDays(){
     exactAmountOfDays = (todaysDate.getTime() - ourAnniversary.getTime()) / (1000 * 3600 * 24)
     return exactAmountOfDays;
+}
+
+function everythingIntoDays_(){
+    exactAmountOfDays = (todaysDate.getTime() - ourDayWeMet.getTime()) / (1000 * 3600 * 24)
+    return exactAmountOfDays;
+}
+
+function changeText(){
+    header.innerText = "How long do we know each other"
+    arrowUp.style.display = "none";
+    arrowDown.style.display = "flex";
+}
+
+function changeTextBack(){
+    header.innerText = "How long have we been together"
+    arrowUp.style.display = "flex";
+    arrowDown.style.display = "none";
 }
 
