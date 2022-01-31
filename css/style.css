@@ -70,7 +70,11 @@
 .main-container + span {
     font-family: var(--text--opens-sans);
     border-bottom: 1px solid var(--color--light-grey);
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
 }
+
 
 .container{
     min-height: 50vh;
@@ -95,7 +99,48 @@
 }
 
 @media only screen and (max-width: 900px) {
+
     .container{
         flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 789px) {
+
+    .container-header{
+        padding: 30px 60px;
+        margin-left: 15px;
+        margin-right: 15px;
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 690px) {
+
+    .main-container{
+        margin-left: 5vh;
+        margin-right: 5vh;
+    }
+
+    .container-header{
+        padding: 20px 30px;
+        margin-left: 15px;
+        margin-right: 15px;
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 534px) {
+
+    .main-container{
+        margin-left: 2vh;
+        margin-right: 2vh;
+    }
+
+    .container-header{
+        padding: 20px 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+        font-size: 11px;
     }
 }
