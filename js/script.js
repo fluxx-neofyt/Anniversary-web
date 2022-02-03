@@ -31,12 +31,12 @@ arrowDown.addEventListener('click', changeTextBack);
 function yearsInSeconds(){
     if (header.innerText.includes("other")){
         days = everythingIntoDays_();
-        daysIntoMinutes = days * 24 * 60 * 60;
-        textArray.innerText = daysIntoMinutes + " seconds";
+        daysIntoSeconds = days * 24 * 60 * 60;
+        textArray.innerText = daysIntoSeconds + " ≅ " + Math.floor(daysIntoSeconds) + " seconds";
     }else{
         days = everythingIntoDays();
-        daysIntoMinutes = days * 24 * 60 * 60;
-        textArray.innerText = daysIntoMinutes + " seconds";
+        daysIntoSeconds = days * 24 * 60 * 60;
+        textArray.innerText = daysIntoSeconds + " ≅ " + Math.floor(daysIntoSeconds) + " seconds";
     }
 };
 
@@ -44,11 +44,11 @@ function yearsInMinutes(){
     if (header.innerText.includes("other")){
         days = everythingIntoDays_();
         daysIntoMinutes = days * 24 * 60;
-        textArray.innerText = daysIntoMinutes + " minutes";
+        textArray.innerText = daysIntoMinutes + " ≅ " + Math.floor(daysIntoMinutes) + " minutes";
     }else{
         days = everythingIntoDays();
         daysIntoMinutes = days * 24 * 60;
-        textArray.innerText = daysIntoMinutes + " minutes";
+        textArray.innerText = daysIntoMinutes + " ≅ " + Math.floor(daysIntoMinutes) + " minutes";
     }
 };
 
@@ -56,21 +56,21 @@ function yearsInHours(){
     if (header.innerText.includes("other")){
         days = everythingIntoDays_();
         daysIntoHours = days * 24;
-        textArray.innerText = daysIntoHours + " hours";
+        textArray.innerText = daysIntoHours + " ≅ " + Math.floor(daysIntoHours) + " hours";
     }else{
     days = everythingIntoDays();
     daysIntoHours = days * 24;
-    textArray.innerText = daysIntoHours + " hours";
+    textArray.innerText = daysIntoHours + " ≅ " + Math.floor(daysIntoHours) + " hours";
     }
 };
 
 function yearsInDays(){
     if (header.innerText.includes("other")){
         days = everythingIntoDays_();
-        textArray.innerText = days + " days";
+        textArray.innerText = days + " ≅ " + Math.floor(days) + " days";
     }else{
     days = everythingIntoDays();
-    textArray.innerText = days + " days";
+    textArray.innerText = days + " ≅ " + Math.floor(days) + " days";
     }
 };
 
@@ -79,11 +79,11 @@ function yearsInMonths(){
     if (header.innerText.includes("other")){
         days = everythingIntoDays_();
         daysIntoMonths = (days / 365) * 12 ;
-        textArray.innerText = daysIntoMonths + " months";
+        textArray.innerText = daysIntoMonths + " ≅ " + Math.floor(daysIntoMonths) + " months";
     }else{
     days = everythingIntoDays();
     daysIntoMonths = (days / 365) * 12 ;
-    textArray.innerText = daysIntoMonths + " months";
+    textArray.innerText = daysIntoMonths + " ≅ " + Math.floor(daysIntoMonths) + " months";
     }
 };
 
@@ -91,11 +91,11 @@ function years(){
     if (header.innerText.includes("other")){
         days = everythingIntoDays_();
         daysIntoYears = days / 364;
-        textArray.innerText = daysIntoYears + " years";
+        textArray.innerText = daysIntoYears + " ≅ " + Math.floor(daysIntoYears) + " years";
     }else{
         days = everythingIntoDays();
         daysIntoYears = days / 364;
-        textArray.innerText = daysIntoYears + " years";
+        textArray.innerText = daysIntoYears + " ≅ " + Math.floor(daysIntoYears) + " years";
     }
     
 }
