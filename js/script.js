@@ -90,11 +90,11 @@ function yearsInMonths(){
 function years(){
     if (header.innerText.includes("other")){
         days = everythingIntoDays_();
-        daysIntoYears = days / 364;
+        daysIntoYears = days / 365;
         textArray.innerText = daysIntoYears + " ≅ " + Math.floor(daysIntoYears) + " years";
     }else{
         days = everythingIntoDays();
-        daysIntoYears = days / 364;
+        daysIntoYears = days / 365;
         textArray.innerText = daysIntoYears + " ≅ " + Math.floor(daysIntoYears) + " years";
     }
     
