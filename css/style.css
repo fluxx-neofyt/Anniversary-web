@@ -90,11 +90,11 @@
     border-radius: 88px;
     margin: 10px;
     font-family: var(--text--opens-sans);
+    transition: .6s;
 }
 
 .container span:hover{
     background-color: var(--color--light-grey);
-    transition: .6s;
     color: white;
     cursor: pointer;
 }
