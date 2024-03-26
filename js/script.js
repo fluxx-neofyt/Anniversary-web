@@ -1,7 +1,7 @@
 //constant
 var todaysDate = new Date();
-const ourAnniversary = new Date("2017-03-05T21:07:00")
-const ourDayWeMet = new Date("2015-06-15T15:07:00")
+const ourAnniversary = new Date("2023-03-27T23:15:00")
+const ourDayWeMet = new Date("2023-01-19T23:07:00")
 
 //select DOM
 outputInSeconds = document.querySelector('.seconds');
